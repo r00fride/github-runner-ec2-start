@@ -22,7 +22,7 @@ jobs:
 
       - name: Run EC2 Start
         id: start-ec2-runner
-        uses: rogisolorzano/github-runner-ec2-start@v1.2
+        uses: r00fride/github-runner-ec2-start@v1.2
         with:
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           subnet-id: subnet-0b5eh6caf3b05f9ee
@@ -74,7 +74,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Run EC2 Stop
-        uses: rogisolorzano/github-runner-ec2-stop@v1
+        uses: r00fride/github-runner-ec2-stop@v1
         with:
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           runner-label: ${{ needs.start-runner.outputs.runner-label }}
